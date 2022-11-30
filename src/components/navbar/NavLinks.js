@@ -1,22 +1,22 @@
 const NavLinks = [
   {
-    link: "#home",
+    link: "home",
     title: "Home",
   },
   {
-    link: "#wgpt3",
+    link: "wgpt3",
     title: "What is GPT3?",
   },
   {
-    link: "#possibility",
+    link: "possibility",
     title: "Open AI",
   },
   {
-    link: "#features",
+    link: "features",
     title: "Case Studies",
   },
   {
-    link: "#blog",
+    link: "blog",
     title: "Library",
   },
 ];

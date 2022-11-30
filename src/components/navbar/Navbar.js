@@ -1,29 +1,10 @@
 import React, { useState } from "react";
+import { Link } from "react-scroll";
 import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
 import logo from "../../assets/logo.svg";
 import NavLinks from "./NavLinks";
 
 import "./navbar.css";
-
-const Menu = () => (
-  <>
-    <p>
-      <a href="#home">Home</a>
-    </p>
-    <p>
-      <a href="#wgpt3">What is GPT3?</a>
-    </p>
-    <p>
-      <a href="#possibility">Open AI</a>
-    </p>
-    <p>
-      <a href="#features">Case Studies</a>
-    </p>
-    <p>
-      <a href="#blog">Library</a>
-    </p>
-  </>
-);
 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
@@ -37,8 +18,16 @@ const Navbar = () => {
           {NavLinks.map((val, key) => {
             return (
               <p>
-                <a href={val.link}></a>
-                {val.title}
+                <Link
+                  activeClass="active"
+                  to={val.link}
+                  spy={true}
+                  // smooth={true}
+                  offset={-20}
+                  duration={500}
+                >
+                  {val.title}
+                </Link>
               </p>
             );
           })}
@@ -68,8 +57,16 @@ const Navbar = () => {
               {NavLinks.map((val, key) => {
                 return (
                   <p>
-                    <a href={val.link}></a>
-                    {val.title}
+                    <Link
+                      activeClass="active"
+                      to={val.link}
+                      spy={true}
+                      // smooth={true}
+                      offset={0}
+                      duration={500}
+                    >
+                      {val.title}
+                    </Link>
                   </p>
                 );
               })}
