@@ -23,11 +23,10 @@ const Navbar = () => {
                   to={val.link}
                   spy={true}
                   // smooth={true}
-                  offset={-20}
+                  offset={-5}
                   duration={500}
                 >
                   {val.title}
-                  key={val.title + index}
                 </Link>
               </p>
             );
