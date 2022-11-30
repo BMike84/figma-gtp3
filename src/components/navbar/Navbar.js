@@ -15,9 +15,9 @@ const Navbar = () => {
           <img src={logo} alt="logo" />
         </div>
         <div className="gpt3__navbar-links_container">
-          {NavLinks.map((val, key) => {
+          {NavLinks.map((val, index) => {
             return (
-              <p>
+              <p key={val.title + index}>
                 <Link
                   activeClass="active"
                   to={val.link}
@@ -27,6 +27,7 @@ const Navbar = () => {
                   duration={500}
                 >
                   {val.title}
+                  key={val.title + index}
                 </Link>
               </p>
             );
@@ -54,9 +55,9 @@ const Navbar = () => {
         {toggleMenu && (
           <div className="gpt3__navbar-menu_container scale-up-center">
             <div className="gpt3__navbar-menu_container-links">
-              {NavLinks.map((val, key) => {
+              {NavLinks.map((val, index) => {
                 return (
-                  <p>
+                  <p key={val.title + index}>
                     <Link
                       activeClass="active"
                       to={val.link}

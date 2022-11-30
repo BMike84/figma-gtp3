@@ -5,9 +5,9 @@ import BrandLogos from "./BrandLogos";
 const Brand = () => {
   return (
     <div className="gpt3__brand section__padding">
-      {BrandLogos.map((val, key) => {
+      {BrandLogos.map((val, index) => {
         return (
-          <div>
+          <div key={index}>
             <img src={val.img} alt="google" />
           </div>
         );
